@@ -1,0 +1,92 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Sudoku</title>
+	<link href='css.css' rel='stylesheet' type='text/css' />
+	<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.11.2.min.js"></script>
+	<script type="text/javascript" src="jq.js"></script>
+    <script type="text/javascript" src="javascript.js"></script>
+</head>
+<body onload="tab()">
+  
+<div id="obal">
+
+  <style type="text/css" scoped>
+      table {
+    
+    float: left;
+  border-collapse: collapse;
+  table-layout: fixed;
+  width: 600px;
+  height: 400px;
+  }
+  td{
+    border: 1px solid black;
+  }
+ 
+}
+</style>
+ <div id="tabulka"></div>
+
+<div id="prava">
+	
+	<h1>Sudoku</h1>	
+	<div id="nap"><p></p>
+	<h2>Nápověda:</h2>
+	<ul>
+    <li>Stopky spustíš kliknutím na START</li>
+		<li>Pro zápis klikni na pole a pomocí klávesnice vypiš</li>
+		<li>Po vyplnění celého pole klikni na DOKONČIT</li>
+		<li>Pokud bude tvůj zápis nezprávný nebo nevyplněný, pole zčervená</li>
+		<li>V opačném případě zezelená</li>
+		<li>Hru znovu spustíte kliknutím na RESTART</li>
+		<li>Kliknutím na REŠENÍ se tabulka vyplní nebo se zobrazí řešení</li>
+		<li>Dvojitým poklepáním na obrázek, řešení opět zmizí</li>
+		<li>Dvojitým kliknutím do nápovědy, ji opět uschováte</li>
+	</ul>
+</div>
+
+<script type="text/javascript">
+function reseni(){
+	obr.innerHTML="<img src='reseni.jpg' width='280'>";
+}
+function res(){
+  obr.innerHTML="";
+}
+
+
+function cas(){
+casik = casik+1;
+var mereni=0;
+h = Math.floor(casik/3600);
+ma = Math.floor(casik/60);
+mb = h*60;
+m = ma-mb;
+sa = ma*60;
+s = casik-sa;
+};
+</script>
+
+
+  <script>
+casik = 0;
+</script>
+<script type="text/javascript">
+
+function kont(){
+
+  alert("Hra trvala "+h+":"+m+":"+s);
+}
+</script>
+
+<h1> <span id="hodiny">0</span>: <span id="minuty">0</span>: <span id="sekundy">0</span> </h1>
+  <button onclick="mereni = setInterval('cas(); hodiny.innerHTML=h; minuty.innerHTML=m; sekundy.innerHTML=s;', 1000);">START</button>  <button onclick="location.reload(true);">RESTART</button>  <button onclick="clearInterval(mereni),kont(),kontrola()" >DOKONČIT</button>
+<button id="2">REŠENÍ</button>  <button id="1">NAPOVĚDA</button>		
+
+<footer><h5> Zdeněk Hulva, IT2</h5></footer>
+<p id="obrazek"></p>
+<p>(kliknutím na obrázek, řešení zmizí)</p>
+</div></div>
+</body>
+</html>
