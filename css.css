@@ -1,0 +1,74 @@
+body{
+	background-color: #AFD89C;
+}
+table{
+	float: left;
+	border-collapse: collapse;
+	table-layout: fixed;
+	width: 600px;
+	height: 400px;
+
+}
+h1{
+	color: #000000;
+}
+td{
+	background-color: #FFFFFF;
+}
+#obtiz{
+	padding: 200px 100px 100px 500px;
+	float: center;
+	
+	margin: 5px auto;
+}
+#obal{
+	width: 1300px;
+	margin: 5px auto;
+}
+#prava{
+	float: right;
+	padding-right: 200px;
+}
+input{
+	border: none;
+	height: 62px;
+	width: 44pt;
+	font-size: 25px;
+	text-align: center;
+}
+
+.hr{
+	border-top: thick solid #000000;
+}
+.roh1{
+	border-left: thick solid #000000;
+	border-top: thick solid #000000;
+}
+.lr{
+	border-left: thick solid #000000;
+}
+.roh2{
+	border-left: thick solid #000000;
+	border-bottom: thick solid #000000;
+}
+.dr{
+	border-bottom: thick solid #000000;
+}
+.roh3{
+	border-bottom: thick solid #000000;
+	border-right: thick solid #000000;
+}
+.pr{
+	border-right: thick solid #000000;
+}
+.roh4{
+	border-right: thick solid #000000;
+	border-top: thick solid #000000;
+}
+h2{
+	text-align: center;
+}
+.dop{
+	color: #000000;
+	background-color: #DCDAFC;
+}
